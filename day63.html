@@ -1,0 +1,25 @@
+/* 
+  Create an HTML file that contains an input box and a button. 
+  When the button is clicked, use JavaScript to take the text from the input box and add it to a list displayed on the screen, separating each entry with a comma.
+*/
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HW work js4</title>
+  </head>
+  <body>
+    <input type="text" id ="inputBox" placeholder="Enter text">
+    <button type="button" onclick="commaInput()">Submit</button>
+    <div id="result"></div>
+    <script>
+       let values = [];
+      function commaInput(){
+        let input =document.getElementById("inputBox").value;
+        values.push(input);
+        document.getElementById("result").innerText= values.join(",");
+      }
+
+    </script>
+  </body>
+</html>

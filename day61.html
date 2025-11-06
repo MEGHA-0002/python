@@ -1,0 +1,27 @@
+/* 
+  Create an HTML file that contains a form with two input fields: one for the user's name and another for their age. 
+  When the form is submitted, use JavaScript to display a message on the screen that says "Hello [Name], you are [Age] years old!".
+*/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HW work js2</title>
+  </head>
+  <body>
+    <form id="MyForm">
+      <label>Name:</label>
+      <input type="text" id="name"><br>
+      <label>Age:</label>
+      <input type="number" id="age"><br>
+      <button type="button" onclick="submitForm()">Submit</button>
+      </form>
+      <div id="output"></div>
+      <script>
+        function submitForm(){
+          let name=document.getElementById("name").value;
+          let age=document.getElementById("age").value;
+         document.getElementById("output").innerText= "Name: " + name + ", Age: " +age;
+        }
+      </script>
+  </body>
+</html>

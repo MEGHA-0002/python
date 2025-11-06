@@ -1,0 +1,24 @@
+/*
+  Create an HTML file that contains an image and a button. 
+  When the button is clicked, use JavaScript to display the source URL of the image on the screen.
+*/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HW work js5</title>
+  </head>
+  <body>
+    <img id ="image" src="https://shorthand.com/the-craft/raster-images/assets/5kVrMqC0wp/sh-unsplash_5qt09yibrok-4096x2731.jpeg" alt="Image" width="250" height="300">
+    <br
+    <button type="button" onclick="displaySrc()">View</button>
+    <div id="result"></div>
+    <script>
+      function displaySrc(){
+        let imgSrc=document.getElementById("image").src;
+        document.getElementById("result").innerText= imgSrc;
+
+      }
+    </script>
+
+  </body>
+</html>

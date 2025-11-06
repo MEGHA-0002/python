@@ -1,0 +1,22 @@
+/*
+  Create an HTML file that contains a paragraph of text and a button. 
+  When the button is clicked, use JavaScript to print the content of the paragraph to the screen.
+*/
+
+<!DOCTYPE html>
+<html>  
+  <head>
+    <title>HW work js</title>
+  </head>
+  <body>
+    <p id="para">The quick brown fox jumps over the lazy dog. This sentence contains every letter of the English alphabet and is often used for testing fonts, keyboards, and software applications. It’s a sunny afternoon, and the fox is full of energy while the dog enjoys a peaceful nap in the shade.</p>
+    <button onclick="printParagraph()">Click to See</button>
+    <div id="result"></div>
+    <script>
+    function printParagraph() {
+      let paragraph = document.getElementById("para").textContent;
+      document.getElementById("result").innerText = paragraph;
+    }
+  </script>
+  </body>
+</html>

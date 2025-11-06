@@ -1,0 +1,23 @@
+/* 
+  Create an HTML file that contains an input box and a button. 
+  When the button is clicked, use JavaScript to read the text from the input box, 
+  split the text by commas, and print each item on a new line on the screen.
+*/
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HW work js3</title>
+  </head>
+  <body>
+    <input type="text" id="inputBox" placeholder="Enter text separated by commas">
+    <button type="button" onclick="printInput()">Submit</button>
+    <div id="result"></div>
+    <script>
+      function printInput(){
+        let input = document.getElementById("inputBox").value;
+        let items = input.split(",").join("<br>");
+        document.getElementById("result").innerHTML = items;  
+      }
+    </script>
+  </body>
+</html>

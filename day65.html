@@ -1,0 +1,22 @@
+  /* validate number input */ 
+  <!DOCTYPE html>
+  <html>
+    <head> <title>HW work js6</title>
+    </head>
+    <body>
+      <input type="number" id="numberInput" placeholder="Enter the number">
+      <button type="button" onclick="checkInput()">Validate</button>
+      <div id="output"></div>
+      <script>
+        function checkInput() {
+          let num = document.getElementById("numberInput").value;
+          let output = document.getElementById("output");
+          if(isNaN(num) || num === "") {
+            output.innerHTML = '<span style="color:red;">Invalid input, please enter a number.</span>';
+          } else {
+            output.innerHTML = '<span style="color:green;">Valid number entered.</span>';
+          }
+        }
+      </script>
+    </body>
+  </html>
