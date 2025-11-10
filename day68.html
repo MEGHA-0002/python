@@ -1,0 +1,122 @@
+/*  Create a Responsive Login Form with Image Background */    
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Login Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        
+        .bg {
+            flex: 1;
+            background: url('https://picsum.photos/800/800') no-repeat center center/cover;
+            min-height: 100vh;
+        }
+
+        
+        .login-box {
+                    flex: 1;
+                    background-color: white;
+                    margin: 0;
+                    display: flex;
+                    padding-left: 20px;
+                    padding-top: 60px;        
+                    }
+
+        form {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        h2 {
+            color:#E74C3C ;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+       .remember {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+        button {
+            width: 100%;
+            background-color: #E74C3C;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        
+        @media (max-width: 300px) {
+            .container {
+                flex-direction: column;
+            }
+            .bg {
+                display: none;
+            }
+            .login-box {
+                flex: none;
+                width: 100%;
+                min-height: 100vh;
+                justify-content: center;
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bg"></div>
+        <div class="login-box">
+            <form>
+                <h2>Login Form</h2>
+
+                <label>Email :</label>
+                <input type="text" name="email">
+
+                <label>Password :</label>
+                <input type="password" name="password">
+
+                <div class="remember">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
