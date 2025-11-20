@@ -199,3 +199,57 @@ a= lambda x: 2 ** x
 num =int(int("enter the power"))
 print(f"2 ^ {num}= ",a(num))
 print(a(num))
+
+# 21 the vowels and cononanats present in a  word
+string = input("Enter the string: ")
+vowels = ["a", "e", "i", "o", "u"]
+
+def vowelelist(s):
+    count = 0
+    vowel_found = []
+    for i in s:
+        if i in vowels:
+            count += 1
+            if i not in vowel_found:
+                vowel_found.append(i)
+    return count, vowel_found
+
+string = string.lower()
+print(vowelelist(string))
+
+# 22 alphabets or not
+a= input("enter the content")
+a=a.lower()
+for char in a:
+  if 'a'<= char <='z':
+    print("alphabet")
+
+# 23 HCF of a number
+num1=int(input("enter the first number"))
+num2 =int(input("enter the second number"))
+def hcf(num1,num2):
+    if num1>num2:
+        small=num2
+    else:
+        small=num1
+    for i in range (1,small + 1):
+        if(num1%i==0) and (num2 %i==0):
+            hcf=i
+    return hcf
+print(hcf(num1,num2))
+
+# 24.  lcm of a number
+num1=int(input("enter the first number"))
+num2 =int(input("enter the second number"))
+def lcm(x,y):
+    if (x>y):
+        greater =x
+    else:
+        greater =y
+    while(True):
+        if (greater % x==0) and (greater %y ==0):
+            lcm = greater
+            break
+        greater +=1
+    return lcm
+print(lcm(num1,num2))
